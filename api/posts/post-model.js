@@ -23,9 +23,9 @@ function getById(id) {
 }
 
 async function create(post) {
-  // HERE
+  // HERE THE DATA SHOULD BE PERFECT
   const [id] = await db('posts').insert(post)
-  return db('posts').where({ id }).first()
+  return getById(id)
 }
 
 function update() {
