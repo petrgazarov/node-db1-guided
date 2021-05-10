@@ -40,5 +40,5 @@ async function update(id, post) {
 }
 
 async function remove(id) {
-  return Promise.resolve('delete wired')
+  const numOfAffectedRecords = await db('posts').where('id', id).del()
 }
