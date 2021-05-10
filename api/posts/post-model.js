@@ -28,6 +28,7 @@ async function create(post) {
   // WITH SQLITE, AN ARRAY OF IDS GETS RESOLVED
   const [id] = await db('posts').insert(post)
   // RETURN GOOD STUFF FOR THE CLIENT
+  // USE ASYNC KEYWORD IF YOU NEED AWAIT INSIDE FUNCTION
   return getById(id)
 }
 
