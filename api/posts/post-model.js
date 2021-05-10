@@ -16,7 +16,7 @@ function get() {
 }
 
 function getById(id) {
-  return Promise.resolve('getById wired')
+  return db.raw(`select * from posts ???????`)
 }
 
 function create() {
