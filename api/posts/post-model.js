@@ -22,8 +22,9 @@ function getById(id) {
   return db('posts').where({ id }).first()
 }
 
-function create(post) {
-  return db('posts').insert(post)
+async function create(post) {
+  const [id] = db('posts').insert(post)
+  return getById(id)
 }
 
 function update() {
