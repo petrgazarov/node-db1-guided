@@ -33,7 +33,7 @@ async function create(post) {
 }
 
 function update(post) {
-  return db()
+  return db('posts').where('id').update(post)
 }
 
 function remove() {
