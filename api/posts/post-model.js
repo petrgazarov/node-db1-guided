@@ -19,7 +19,7 @@ async function getById(id) {
   // RETURNS ARRAY UNLESS WE CHAIN .first()
   // return db.raw(`select * from posts where id = ?`, [id])
   // return db('posts').where('id', id)
-  const stuff = await db('posts').where({ id }).first()
+  return db('posts').where({ id }).first()
   return stuff
 }
 
