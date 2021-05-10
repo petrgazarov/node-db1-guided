@@ -9,7 +9,7 @@ module.exports = {
 }
 
 function get() {
-  return db.raw()
+  return db.raw(`select * from posts`)
 }
 
 function getById() {
