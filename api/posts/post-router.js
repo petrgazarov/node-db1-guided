@@ -40,7 +40,7 @@ router.post('/', checkPayload, async (req, res, next) => {
 
 router.put('/:id', checkPayload, checkId, async (req, res,next ) => {
   try {
-    const data = await Post.update()
+    const data = await Post.update(req.params.id, req.body)
     res.json(data)
   } catch (err) {
     next(err)
