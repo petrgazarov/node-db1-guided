@@ -15,11 +15,12 @@ function get() {
   return db.select('*').from('posts')
 }
 
-function getById(id) {
+async function getById(id) {
   // RETURNS ARRAY UNLESS WE CHAIN .first()
   // return db.raw(`select * from posts where id = ?`, [id])
   // return db('posts').where('id', id)
-  return db('posts').where({ id }).first()
+  const stuff = await db('posts').where({ id }).first()
+  return stuff
 }
 
 async function create(post) {
