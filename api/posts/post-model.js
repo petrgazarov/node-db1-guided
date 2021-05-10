@@ -9,7 +9,7 @@ module.exports = {
 }
 
 function get(query) {
-  return db.raw(`select * from posts `)
+  return db.raw(`select * from posts limit ?`, [])
 }
 
 function getById() {
