@@ -39,6 +39,6 @@ async function update(id, post) {
   return updatedPost
 }
 
-function remove() {
+async function remove(id) {
   return Promise.resolve('delete wired')
 }
