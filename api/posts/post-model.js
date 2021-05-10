@@ -18,7 +18,7 @@ function get() {
 function getById(id) {
   // return db.raw(`select * from posts where id = ?`, [id])
   // return db('posts').where('id', id)
-  return db('posts').where({ id })
+  return db('posts').where({ id }).first()
 }
 
 function create() {
