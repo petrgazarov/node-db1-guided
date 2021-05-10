@@ -25,6 +25,7 @@ function getById(id) {
 async function create(post) {
   // HERE THE DATA SHOULD BE PERFECT
   const [id] = await db('posts').insert(post)
+  // RETURN GOOD STUFF FOR THE CLIENT
   return getById(id)
 }
 
