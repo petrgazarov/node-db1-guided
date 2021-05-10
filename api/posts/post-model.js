@@ -8,8 +8,8 @@ module.exports = {
   remove,
 }
 
-function get(query) {
-  return db.raw(`select * from posts limit ?`, [query.limit])
+function get() {
+  // return db.raw(`select * from posts limit ?`, [query.limit])
 }
 
 function getById() {
