@@ -22,7 +22,7 @@ function getById(id) {
   return db('posts').where({ id }).first()
 }
 
-function create() {
+function create({ }) {
   return Promise.resolve('create wired')
 }
 
