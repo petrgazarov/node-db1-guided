@@ -22,8 +22,8 @@ function getById(id) {
   return db('posts').where({ id }).first()
 }
 
-function create({ }) {
-  return Promise.resolve('create wired')
+function create({ title, contents }) {
+  return db('posts')
 }
 
 function update() {
