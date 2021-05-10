@@ -23,7 +23,7 @@ function getById(id) {
 }
 
 function create({ title, contents }) {
-  return db('posts')
+  return db('posts').insert({ title, contents})
 }
 
 function update() {
