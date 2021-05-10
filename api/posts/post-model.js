@@ -41,6 +41,6 @@ async function update(id, post) {
 
 async function remove(id) {
   const postThatMustDie = await getById(id)
-  await db('posts').where('id', id).del()
+  const numOfAffectedRecords = await db('posts').where('id', id).del()
   return postThatMustDie
 }
