@@ -32,8 +32,8 @@ async function create(post) {
   return getById(id)
 }
 
-function update() {
-  return Promise.resolve('update wired')
+function update(post) {
+  return db()
 }
 
 function remove() {
