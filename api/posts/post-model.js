@@ -33,7 +33,7 @@ async function create(post) {
 }
 
 async function update(id, post) {
-  await db('posts').where('id', id).update(post)
+  const [n] = await db('posts').where('id', id).update(post)
 }
 
 function remove() {
