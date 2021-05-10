@@ -16,7 +16,7 @@ function get() {
 }
 
 function getById(id) {
-   // RETURNS ARRAY UNLESS WE CHAIN .first()
+  // RETURNS ARRAY UNLESS WE CHAIN .first()
   // return db.raw(`select * from posts where id = ?`, [id])
   // return db('posts').where('id', id)
   return db('posts').where({ id }).first()
