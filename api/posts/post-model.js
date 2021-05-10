@@ -22,8 +22,8 @@ function getById(id) {
   return db('posts').where({ id }).first()
 }
 
-function create({ title, contents }) {
-  return db('posts').insert({ title, contents})
+function create(post) {
+  return db('posts').insert(post)
 }
 
 function update() {
