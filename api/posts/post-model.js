@@ -23,7 +23,8 @@ function getById(id) {
 }
 
 async function create(post) {
-  const [id] = db('posts').insert(post)
+  // HERE
+  const [id] = await db('posts').insert(post)
   return db('posts').where({ id }).first()
 }
 
