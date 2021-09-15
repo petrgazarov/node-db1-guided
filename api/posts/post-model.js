@@ -16,8 +16,10 @@ async function getById(id) {
   return db('posts').where({ id }).first();
 }
 
-async function create() {
-  return 'create wired'
+async function create(data) {
+  const [id] = await db('posts').insert(data);
+
+  return getById(id);
 }
 
 async function update() {
