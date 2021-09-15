@@ -1,3 +1,5 @@
+const db = require('../../data/db-config');
+
 module.exports = {
   get,
   getById,
@@ -7,11 +9,11 @@ module.exports = {
 }
 
 async function get() {
-  return 'get wired'
+  return db('posts');
 }
 
-async function getById() {
-  return 'getById wired'
+async function getById(id) {
+  return db('posts').where({ id }).first();
 }
 
 async function create() {
