@@ -22,10 +22,16 @@ async function create(data) {
   return getById(id);
 }
 
-async function update() {
-  return 'update wired'
+async function update(id) {
+  await db('posts').where({ id }).update({ title, contents });
+
+  return getById(id);
 }
 
 async function remove() {
-  return 'delete wired'
+  const toBeDeleted = await getById(id);
+
+  await db('posts').where('id', id).delete();
+
+  return toBeDeleted;
 }
