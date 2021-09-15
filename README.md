@@ -12,3 +12,10 @@ In this project we will cover the basics of `Structure Query Language (SQL)`, `R
 - [ ] clone this repository.
 - [ ] move into the project folder.
 - [ ] type `npm i` to download dependencies.
+
+## Files with Notes:
+- ./knexfile.js
+- ./sql-notes.md
+- ./api/posts/post-router.js
+- ./api/posts/post-model.js
+- ./data/db-config.js
