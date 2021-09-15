@@ -22,13 +22,13 @@ async function create(data) {
   return getById(id);
 }
 
-async function update(id) {
+async function update(id, { title, contents }) {
   await db('posts').where({ id }).update({ title, contents });
 
   return getById(id);
 }
 
-async function remove() {
+async function remove(id) {
   const toBeDeleted = await getById(id);
 
   await db('posts').where('id', id).delete();
